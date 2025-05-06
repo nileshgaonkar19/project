@@ -51,7 +51,12 @@ cd project
 
 ```
 
-*2. Add .env file*
+*2. install requirements*
+
+```
+pip install -r requirements.txt
+
+```
 
 *3. Start services with Docker*
 ```
