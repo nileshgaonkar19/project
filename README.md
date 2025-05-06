@@ -44,16 +44,16 @@ sample taken from https://www.datablist.com/learn/csv/download-sample-csv-files#
 
 
 ## Running the Project
-1. Clone the repo
+*1. Clone the repo*
 ```
 git clone <repo-url>
 cd project
 
 ```
 
-2. Add .env file
+*2. Add .env file*
 
-3. Start services with Docker
+*3. Start services with Docker*
 ```
 docker-compose up --build
 
@@ -66,5 +66,19 @@ RabbitMQ: localhost:5672
 pgAdmin: http://localhost:5050
 
 FastAPI: http://localhost:8000/docs
+
+```
+
+*4. Run Publisher (CSV Reader)*
+```
+cd reader_service
+python main.py
+
+```
+
+*5. Run Consumer*
+```
+cd consumer_service
+python main.py
 
 ```
