@@ -36,7 +36,6 @@ project/
 
 ## CSV Format (data.csv)
 ```
-
 id,firstname,lastname,email,phone
 1,John,Doe,john@example.com,1234567890
 
@@ -47,7 +46,6 @@ sample taken from https://www.datablist.com/learn/csv/download-sample-csv-files#
 ##Running the Project
 1. Clone the repo
 ```
-
 git clone <repo-url>
 cd project
 
@@ -57,8 +55,6 @@ cd project
 
 3. Start services with Docker
 ```
-
 docker-compose up --build
-
 
 ```
