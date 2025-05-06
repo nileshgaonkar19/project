@@ -1,5 +1,15 @@
 # project
 
+## Structure
+project/
+├── api_service/         <- FastAPI API with search/filter/pagination
+├── reader_service/      <- Reads CSV and sends to RabbitMQ
+├── consumer_service/    <- Consumes from RabbitMQ and saves to PostgreSQL
+├── docker-compose.yml   <- Docker file
+├── .env                 <- Envirement variables
+└── README.md
+
+
 ## Features
 ✅ Reader Microservice (Publisher)
 Reads a CSV file line-by-line & Sends each row as a message to RabbitMQ queue
@@ -31,5 +41,7 @@ sample taken from https://www.datablist.com/learn/csv/download-sample-csv-files#
 
 🚀 Running the Project
 1. Clone the repo
+```
 git clone <repo-url>
 cd project
+```
