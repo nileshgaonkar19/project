@@ -1,6 +1,4 @@
-import pika
-import csv
-import os
+import pika, csv, os
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -15,7 +13,7 @@ def publish_message(message):
     channel.basic_publish(exchange='', routing_key=RABBITMQ_QUEUE, body=message)
     connection.close()
 
-with open('data.csv', 'r') as file:
+with open('data.csv', 'r') as file: 
     reader = csv.DictReader(file)
     for row in reader:
         print(row)
