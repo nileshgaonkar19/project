@@ -1,16 +1,35 @@
 # project
 
+## Features
+✅ Reader Microservice (Publisher)
+Reads a CSV file line-by-line & Sends each row as a message to RabbitMQ queue
 
-** Build System with the following specifications:
+✅ Consumer Microservice
+Listens to RabbitMQ queue & Saves each message into PostgreSQL
 
-    1. Create a file system where the file is read and data is stored in the database.
-    2. Create an API to fetch the data with features of search, filter and pagination
+✅ API Microservice
+Endpoint: GET /users?pageno=1&pagesize=10&name=John
+Supports:
+Search by name
+Pagination
+Filtering
 
-    Explanation:
+## Tech Stack
+- **FastAPI** – Web framework
+- **PostgreSQL** – Database
+- **PgAdmin** – Database GUI
+- **RabbitMQ** – Message broker
+- **Pika** – RabbitMQ client
+- **SQLAlchemy** – ORM
+- **Docker Compose** – Service orchestration
 
-    1. Create one microservice which reads the file line by line with new data on each new line
-    2. Use Rabbitmq to create a queue and push a request into the queue in the publisher
-    3. Create a new microservice consumer which receives the data and stores it in the Postgresql database in the table
-    <HOST:POST>/<enpoint>?pageno=1&pagesize=10&name=xyz
+## CSV Format (data.csv)
+id,firstname,lastname,email,phone
+1,John,Doe,john@example.com,1234567890
 
-** Share the installation and readme file for setup as well.
+sample taken from https://www.datablist.com/learn/csv/download-sample-csv-files#customers-dataset
+
+🚀 Running the Project
+1. Clone the repo
+git clone <repo-url>
+cd project
