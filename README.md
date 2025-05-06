@@ -13,17 +13,17 @@ project/
 
 ## Features
 **Reader Microservice (Publisher)**
-Reads a CSV file line-by-line & Sends each row as a message to RabbitMQ queue
+- Reads a CSV file line-by-line & Sends each row as a message to RabbitMQ queue
 
-**Consumer Microservice**
-Listens to RabbitMQ queue & Saves each message into PostgreSQL
+**Consumer Microservice (Consumer)**
+- Listens to RabbitMQ queue & Saves each message into PostgreSQL
 
 **API Microservice**
-Endpoint: GET /users?pageno=1&pagesize=10&name=John
-Supports:
-Search by name
-Pagination
-Filtering
+- Endpoint: GET /users?pageno=1&pagesize=10&name=John
+- Supports:
+    - Search by name
+    - Pagination
+    -  Filtering
 
 ## Tech Stack
 - **FastAPI** – Web framework
@@ -50,5 +50,15 @@ sample taken from https://www.datablist.com/learn/csv/download-sample-csv-files#
 
 git clone <repo-url>
 cd project
+
+```
+
+2. Add .env file
+
+3. Start services with Docker
+```
+
+docker-compose up --build
+
 
 ```
