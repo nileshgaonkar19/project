@@ -82,3 +82,40 @@ cd consumer_service
 python main.py
 
 ```
+
+## API Example
+
+## Request:
+```
+GET /users?pageno=1&pagesize=2&name=Sheryl
+
+eg : http://127.0.0.1:8000/users?pageno=1&pagesize=2&name=Sheryl
+
+```
+
+## Response:
+
+```
+{
+  "total_count": 10,
+  "filtered_count": 10,
+  "page_size": 2,
+  "page_number": 1,
+  "users": [
+    {
+      "id": 1,
+      "firstname": "Sheryl",
+      "lastname": "Baxter",
+      "email": "zunigavanessa@smith.info",
+      "phone": "229.077.5154"
+    },
+    {
+      "id": 9,
+      "firstname": "Sheryl",
+      "lastname": "Meyers",
+      "email": "mariokhan@ryan-pope.org",
+      "phone": "854-138-4911x5772"
+    }
+  ]
+}
+```
