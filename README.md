@@ -35,15 +35,20 @@ Filtering
 - **Docker Compose** – Service orchestration
 
 ## CSV Format (data.csv)
+```
+
 id,firstname,lastname,email,phone
 1,John,Doe,john@example.com,1234567890
 
+```
 sample taken from https://www.datablist.com/learn/csv/download-sample-csv-files#customers-dataset
 
 
 ##Running the Project
 1. Clone the repo
 ```
+
 git clone <repo-url>
 cd project
+
 ```
