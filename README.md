@@ -43,7 +43,7 @@ id,firstname,lastname,email,phone
 sample taken from https://www.datablist.com/learn/csv/download-sample-csv-files#customers-dataset
 
 
-##Running the Project
+## Running the Project
 1. Clone the repo
 ```
 git clone <repo-url>
@@ -56,5 +56,15 @@ cd project
 3. Start services with Docker
 ```
 docker-compose up --build
+
+```
+```
+PostgreSQL: localhost:5432
+
+RabbitMQ: localhost:5672
+
+pgAdmin: http://localhost:5050
+
+FastAPI: http://localhost:8000/docs
 
 ```
