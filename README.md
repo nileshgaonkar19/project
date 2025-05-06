@@ -88,6 +88,14 @@ python main.py
 
 ```
 
+*6. Run Fastapi Server from main location*
+
+```
+uvicorn api_service.main:app --reload
+
+```
+
+
 ## API Example
 
 ## Request:
