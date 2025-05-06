@@ -16,6 +16,6 @@ def get_users(db: Session, of: int = 0, limit: int = 10, name: str = None):
         "total_count": total_count,
         "filtered_count": filtered_count,
         "page_size": limit,
-        "page_number": (of / limit) + 1,
+        "page_number": (of // limit) + 1,
         "users": users
     }

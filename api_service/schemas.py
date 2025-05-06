@@ -1,5 +1,6 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 from typing import List
+
 
 class User(BaseModel):
     id: int
@@ -8,8 +9,7 @@ class User(BaseModel):
     email: str
     phone: str
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 class paginated_user_response(BaseModel):  
     total_count: int
@@ -18,5 +18,4 @@ class paginated_user_response(BaseModel):
     page_number: int
     users: List[User]
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
